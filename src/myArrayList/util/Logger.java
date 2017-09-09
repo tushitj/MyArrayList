@@ -1,4 +1,4 @@
-package util;
+package myArrayList.util;
 
 public class Logger {
 
