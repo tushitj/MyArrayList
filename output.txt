@@ -14,8 +14,8 @@
 
  Test Case Number: 2
  Test: Check the sum of all values
- Expected Output: 828
- Actual Output: 828
+ Expected Output: 4134
+ Actual Output: 4134
  Result: PASSED
  Test Case Check the sum of all values Passed.
 
@@ -35,11 +35,77 @@
 
 
  Test Case Number: 4
- Test: Clear the list and add 2 values. Size must be two
+ Test: Clear the list. Size must be Zero
  Expected Output: 0
  Actual Output: 0
  Result: PASSED
- Test Case Clear the list and add 2 values. Size must be two Passed.
+ Test Case Clear the list. Size must be Zero Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 5
+ Test: Empty List size must be Zero
+ Expected Output: 0
+ Actual Output: 0
+ Result: PASSED
+ Test Case Empty List size must be Zero Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 6
+ Test: Test Case to add 100 numbers and remove the 100 numbers,array list size must be zero
+ Expected Output: 0
+ Actual Output: 0
+ Result: PASSED
+ Test Case Test Case to add 100 numbers and remove the 100 numbers,array list size must be zero Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 7
+ Test: Insert a random number and check if it is added or not
+ Expected Output: 0
+ Actual Output: 0
+ Result: PASSED
+ Test Case Insert a random number and check if it is added or not Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 8
+ Test: Remove all instances of a number
+ Expected Output: -1
+ Actual Output: -1
+ Result: PASSED
+ Test Case Remove all instances of a number Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 9
+ Test: Insert 51 elements and size of List must be 51
+ Expected Output: 51
+ Actual Output: 51
+ Result: PASSED
+ Test Case Insert 51 elements and size of List must be 51 Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 10
+ Test: Add a number and check the sum
+ Expected Output: 1285
+ Actual Output: 1285
+ Result: PASSED
+ Test Case Add a number and check the sum Passed.
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------

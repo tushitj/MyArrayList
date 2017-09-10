@@ -30,6 +30,7 @@ public class Driver {
 		rb.storeNewResult(" The sum of all the values in the array list is:"+arr.sum());
 		//rb.writeToFile(args[1]);
 		test.testMe(rb, arr);
+		rb.writeToStdout(null);
 		rb.writeToFile(args[1]);
 	}
 
