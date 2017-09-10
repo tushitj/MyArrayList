@@ -6,7 +6,40 @@
  Expected Output: 11
  Actual Output: 11
  Result: PASSED
- Test Case ArrayList size Passed.
+ Test Case Insert a new value to the array list and check if the size increases or not. Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 2
+ Test: Check the sum of all values
+ Expected Output: 828
+ Actual Output: 828
+ Result: PASSED
+ Test Case Check the sum of all values Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 3
+ Test: Insert largest number and check index
+ Expected Output: 12
+ Actual Output: 12
+ Result: PASSED
+ Test Case Insert largest number and check index Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+ Test Case Number: 4
+ Test: Clear the list and add 2 values. Size must be two
+ Expected Output: 0
+ Actual Output: 0
+ Result: PASSED
+ Test Case Clear the list and add 2 values. Size must be two Passed.
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------

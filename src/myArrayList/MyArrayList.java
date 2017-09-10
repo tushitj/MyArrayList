@@ -75,6 +75,12 @@ public class MyArrayList {
 		else
 			System.out.println("Int value not found.");
 	}
+	public void clear(){
+		for(int i = 0; i <size;i++){
+			array[i] = Integer.MAX_VALUE;
+		}
+		size = 0;
+	}
 	
 	@Override
 	public String toString(){
@@ -84,5 +90,8 @@ public class MyArrayList {
 			sb.append(str);
 		}
 		return sb.toString();
+	}
+	public int valueAt(int index){
+		return array[index];
 	}
 }
