@@ -1,0 +1,13 @@
+ The values taken from file are :1 2 3 4 5 10 11 12 20 99 
+ The sum of all the values in the array list is:167
+
+ Test Case Number: 1
+ Test: Insert a new value to the array list and check if the size increases or not.
+ Expected Output: 11
+ Actual Output: 11
+ Result: PASSED
+ Test Case ArrayList size Passed.
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+

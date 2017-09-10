@@ -85,40 +85,4 @@ public class MyArrayList {
 		}
 		return sb.toString();
 	}
-	
-	public static void main(String[] args) {
-		MyArrayList arr = new MyArrayList();
-		arr.insertSorted(10);
-		arr.insertSorted(11);
-		arr.insertSorted(9);
-		arr.insertSorted(1);
-		arr.insertSorted(8);
-		arr.insertSorted(3);
-		arr.insertSorted(34);
-		arr.insertSorted(16);
-		arr.insertSorted(12);
-		arr.insertSorted(15);
-		arr.insertSorted(18);
-		arr.insertSorted(100);
-		arr.insertSorted(13);
-		arr.insertSorted(167);
-		arr.insertSorted(7);
-		arr.insertSorted(11);
-		arr.insertSorted(5);
-		arr.insertSorted(2);
-		arr.insertSorted(23);
-		
-		System.out.println("Index of 5 is : " +arr.indexOf(5));
-		System.out.println("Size is : "+arr.size());
-		System.out.println("Sum is "+arr.sum());
-		
-		arr.removeValue(7);
-		arr.removeValue(11);
-		System.out.println("after remove");
-		System.out.println("Index of 5 is : " +arr.indexOf(5));
-		System.out.println("Size is : "+arr.size());
-		System.out.println("Sum is "+arr.sum());
-		System.out.println(arr.toString());
-	}
-
 }
