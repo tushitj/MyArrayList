@@ -22,40 +22,27 @@ public class FileProcessor {
 				}
 				else{
 					System.err.println("No file found");
-					System.exit(0);
+					throw new FileNotFoundException();
 				}
 			}catch(FileNotFoundException e){
 				e.printStackTrace();
 				System.exit(0);
 			}
-//			finally{
-//				if(br !=null){
-//					try {
-//						br.close();
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//				if(fin != null){
-//					try {
-//						fin.close();
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			}
 		}
 		else{
 			System.out.println("Invalid File Name");
-		}
-		
+		}		
 	}
 
+	/**
+	 * Function reads each line from the file and returns it to the calling function
+	 * @return string value from the file
+	 */
 	public String readLine(){
-		String line = "";
+		String line = null;
 		try{
 			line = br.readLine();
-			if(line == null || (line.trim().length()<1)){
+			if(line == null || (line.trim().length()<1)){		
 				return null;
 			}
 			else{
@@ -63,9 +50,18 @@ public class FileProcessor {
 			}		
 		}catch(IOException e){
 			e.printStackTrace();
+			}
+		finally{
+			try {
+				if(line == null && br!=null)
+					br.close();
+				if(line == null && fin!=null)
+					fin.close();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}	
 		}
 		return line;
-
 	}
 
 	

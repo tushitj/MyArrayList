@@ -7,9 +7,22 @@ import myArrayList.util.Results;
 
 public class Driver {
 
-	public static boolean checkFile(String filePath){
-		return filePath !=null && filePath.trim().length() > 0 && !filePath.contains("${arg");
+	/**
+	 * Function to perform file validations
+	 * @param fileArrs: array of files to run check on
+	 * @return true or false based on the condition
+	 */
+	public static boolean checkFile(String... fileArrs){
+		boolean flag = true;
+		for(String filePath : fileArrs)
+			flag = flag && filePath !=null && filePath.trim().length() > 0 && !filePath.contains("${arg");
+		return flag;
 	}
+	
+	/**
+	 * Main function that drives the project
+	 * @param args: arguments from command line.
+	 */
 	public static void main(String[] args) {
 		int argLength = args.length;
 		if(argLength!=2){
@@ -18,7 +31,7 @@ public class Driver {
 		}
 		String inputFile = args[0];
 		String outputFile = args[1];
-		if(checkFile(inputFile) && checkFile(outputFile)){
+		if(checkFile(inputFile,outputFile)){
 			FileProcessor fp = new FileProcessor(args[0]);
 			MyArrayList arr = new MyArrayList();
 			String str = "";
@@ -42,6 +55,15 @@ public class Driver {
 			System.out.println("Both input and output files must be present.");
 			System.exit(0);
 		}
+		
+	}
+	
+	/**
+	 * Overridden toString method for class decription
+	 */
+	@Override
+	public String toString(){
+		return "This is the Driver class";
 		
 	}
 

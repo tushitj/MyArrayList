@@ -12,39 +12,37 @@ public class MyArrayListTest {
 	private String separate;
 	private String testCase;
 
+	/**
+	 * Public constructor to initialize private data members of the class
+	 */
 	public MyArrayListTest() {
 		testCaseNumber=0;
 		separate = "\n\n----------------------------------------------------------------\n----------------------------------------------------------------\n";
 		testCase="";
 	}
-
+	/**
+	 * This function calls all the test Methods by using java reflection.
+	 * @param resultIn: Object of Result passed from Driver class.
+	 * @param arrIn: Object of MyArrayList passed from Drive class.
+	 */
 	public void testMe(Results resultIn, MyArrayList arrIn){
 		this.arr = arrIn;
 		this.result = resultIn;
-//		test1();
-//		test2();
-//		test3();
-//		test4();
-//		test5();
-//		test6();
-//		test7();
-//		test8();
-//		test9();
-//		test10();
 		for(int i =1;i<=10;i++){
 			Method method;
 			try {
 				method = this.getClass().getDeclaredMethod("test"+i,(Class<?>[]) null);
 				method.invoke(this,(Object[])null);
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-							// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
 		}
-
 	}
+	
+	/**
+	 * A function that converts the arrayList from MyArrayList object to array for testing.
+	 * @return an array of values in arrayList.
+	 */
 	public int[] convertListToArray(){
 		int[] array = new int[arr.size()];
 		for(int i=0;i<arr.size();i++){
@@ -52,7 +50,23 @@ public class MyArrayListTest {
 		}
 		return array;
 	}
-
+	
+	/**
+	 * This function generates a random number between 0 and 10000
+	 * @return An int value that is random number.
+	 */
+	public int getRandomNumber(){
+		Random rand = new Random();
+		return rand.nextInt(10000);
+	}
+	
+	/**
+	 * This function compares the expected and actual values of the test case and stores the relevant output to the Results object
+	 * @param testCaseNumber: this is the int value of the test case that tells the number of test case.
+	 * @param testCase: this is the string value that tells the type of test case.
+	 * @param expected: this is the int value to be expected from the test
+	 * @param actual: this is the int value actually returned by the test
+	 */
 	public void compareTest(int testCaseNumber, String testCase, int expected, int actual) {
 		String testCaseResult = "FAILED";
 		if(expected == actual){
@@ -177,8 +191,12 @@ public class MyArrayListTest {
 		int expectedSum = sum + 10;
 		compareTest(testCaseNumber, testCase,expectedSum,actualSum);
 	}
-	public int getRandomNumber(){
-		Random rand = new Random();
-		return rand.nextInt(10000);
+	/**
+	 * An overridden method toString to describe the class
+	 */
+	@Override
+	public String toString(){
+		return "MyArrayListTest is a testCase class for MyArrayList class";
 	}
+
 }
