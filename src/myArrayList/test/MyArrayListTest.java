@@ -31,18 +31,18 @@ public class MyArrayListTest {
 //		test8();
 //		test9();
 //		test10();
-				for(int i =1;i<=10;i++){
-					Method method;
-						try {
-							method = this.getClass().getDeclaredMethod("test"+i,(Class<?>[]) null);
-							method.invoke(this,(Object[])null);
-						} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+		for(int i =1;i<=10;i++){
+			Method method;
+			try {
+				method = this.getClass().getDeclaredMethod("test"+i,(Class<?>[]) null);
+				method.invoke(this,(Object[])null);
+			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-					
-				}
+				e.printStackTrace();
+			}
+			
+			
+		}
 
 	}
 	public int[] convertListToArray(){
@@ -59,7 +59,7 @@ public class MyArrayListTest {
 			testCaseResult = "PASSED";
 		}
 		StringBuilder str = new StringBuilder("\n Test Case Number: " +testCaseNumber + "\n Test: "+testCase+"\n Expected Output: "+expected+ "\n Actual Output: "+actual+
-				"\n Result: "+testCaseResult);
+			"\n Result: "+testCaseResult);
 		if(testCaseResult.equalsIgnoreCase("passed")){
 			str.append("\n Test Case "+testCase+" Passed.");
 		}

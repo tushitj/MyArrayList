@@ -28,21 +28,21 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 	@Override
 	public void writeToFile(String s) {
 		File file;
-			file = new File(s);
-			if(!file.isDirectory() && file.exists()){
-				file.delete();
-			}
-			
-			PrintWriter out;
-			try {
-				out = new PrintWriter(new FileWriter("output.txt", true), true);
-				out.write(sb.toString());
-			    out.close();
-			} catch (IOException e) {
-				System.out.println("There was some error in creating the file");
-				e.printStackTrace();
-			}
-		      
+		file = new File(s);
+		if(!file.isDirectory() && file.exists()){
+			file.delete();
+		}
+		
+		PrintWriter out;
+		try {
+			out = new PrintWriter(new FileWriter(s, true), true);
+			out.write(sb.toString());
+			out.close();
+		} catch (IOException e) {
+			System.out.println("There was some error in creating the file");
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
